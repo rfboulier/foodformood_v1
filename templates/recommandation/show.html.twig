@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Recommandation{% endblock %}
+
+{% block body %}
+    <h1>Recommandation</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ recommandation.id }}</td>
+            </tr>
+            <tr>
+                <th>Title</th>
+                <td>{{ recommandation.title }}</td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>{{ recommandation.description }}</td>
+            </tr>
+            <tr>
+                <th>Type</th>
+                <td>{{ recommandation.type }}</td>
+            </tr>
+            <tr>
+                <th>ImageUrl</th>
+                <td>{{ recommandation.imageUrl }}</td>
+            </tr>
+            <tr>
+                <th>Link</th>
+                <td>{{ recommandation.link }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_recommandation_index') }}">back to list</a>
+
+    <a href="{{ path('app_recommandation_edit', {'id': recommandation.id}) }}">edit</a>
+
+    {{ include('recommandation/_delete_form.html.twig') }}
+{% endblock %}

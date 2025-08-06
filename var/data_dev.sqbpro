@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?><sqlb_project><db path="data_dev.db" readonly="0" foreign_keys="1" case_sensitive_like="0" temp_store="0" wal_autocheckpoint="1000" synchronous="2"/><attached/><window><main_tabs open="structure browser pragmas query" current="1"/></window><tab_structure><column_width id="0" width="300"/><column_width id="1" width="0"/><column_width id="2" width="100"/><column_width id="3" width="1949"/><column_width id="4" width="0"/><expanded_item id="0" parent="1"/><expanded_item id="2" parent="0"/><expanded_item id="2" parent="1"/><expanded_item id="3" parent="1"/></tab_structure><tab_browse><table title="recommandation" custom_title="0" dock_id="3" table="4,14:mainrecommandation"/><table title="recommandation" custom_title="0" dock_id="2" table="4,14:mainrecommandation"/><table title="doctrine_migration_versions" custom_title="0" dock_id="1" table="4,27:maindoctrine_migration_versions"/><table title="recommandation" custom_title="0" dock_id="4" table="4,14:mainrecommandation"/><dock_state state="000000ff00000000fd0000000100000002000004510000033ffc0100000001fc00000000000004510000010100fffffffa000000030100000004fb000000160064006f0063006b00420072006f00770073006500310100000000ffffffff0000010100fffffffb000000160064006f0063006b00420072006f00770073006500320100000000ffffffff0000010100fffffffb000000160064006f0063006b00420072006f00770073006500330100000000ffffffff0000010100fffffffb000000160064006f0063006b00420072006f00770073006500340100000000ffffffff0000010100ffffff000002de0000000000000004000000040000000800000008fc00000000"/><default_encoding codec=""/><browse_table_settings><table schema="main" name="recommandation" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_" freeze_columns="0"><sort/><column_widths><column index="1" value="21"/><column index="2" value="201"/><column index="3" value="300"/><column index="4" value="49"/><column index="5" value="266"/><column index="6" value="300"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table></browse_table_settings></tab_browse><tab_sql><sql name="SQL 1*">-- Film
+INSERT INTO recommandation (title, description, type, image_url, link)
+VALUES (
+    'Portrait de la jeune fille en feu',
+    'Un amour impossible et fulgurant entre une peintre et son modèle, sur une île bretonne au XVIIIe siècle.',
+    'film',
+    'https://example.com/images/portrait_jeune_fille.jpg',
+    'https://www.allocine.fr/film/fichefilm_gen_cfilm=263161.html'
+);
+
+-- Livre
+INSERT INTO recommandation (title, description, type, image_url, link)
+VALUES (
+    'Changer l’eau des fleurs - Valérie Perrin',
+    'Violette Toussaint est garde-cimetière dans une petite ville de Bourgogne. Un roman plein de douceur et de résilience.',
+    'livre',
+    'https://example.com/images/changer_eau_fleurs.jpg',
+    'https://www.editionsalbinmichel.fr/changer-leau-des-fleurs-9782226439147'
+);
+
+-- Podcast
+INSERT INTO recommandation (title, description, type, image_url, link)
+VALUES (
+    'Les couilles sur la table',
+    'Un podcast qui interroge les masculinités, par Victoire Tuaillon. Incontournable dans le paysage féministe francophone.',
+    'podcast',
+    'https://example.com/images/les_couilles_podcast.jpg',
+    'https://www.binge.audio/podcast/les-couilles-sur-la-table'
+);
+
+-- Série
+INSERT INTO recommandation (title, description, type, image_url, link)
+VALUES (
+    'Dix pour cent',
+    'Le quotidien mouvementé d’agents artistiques parisiens jonglant entre stars et galères internes. Une pépite française.',
+    'serie',
+    'https://example.com/images/dix_pour_cent.jpg',
+    'https://www.france.tv/france-2/dix-pour-cent/'
+);
+
+DELETE FROM recommandation WHERE id BETWEEN 4 AND 8
+
+INSERT INTO recommandation (title, description, type, image_url, link)
+VALUES (
+    'Dix pour cent',
+    'Le quotidien mouvementé d’agents artistiques parisiens jonglant entre stars et galères internes. Une pépite française.',
+    'serie',
+    'https://example.com/images/dix_pour_cent.jpg',
+    'https://www.france.tv/france-2/dix-pour-cent/'
+);</sql><current_tab id="0"/></tab_sql></sqlb_project>

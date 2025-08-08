@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+    {% block title %}Ajout | Food for Mood{% endblock %}
+
+    {% block body %}
+        <h1>Ajouter une recommandation</h1>
+
+        {{ form_start(recoForm) }}
+        {{ form_widget(recoForm) }}
+
+        <button type="submit">Ajouter</button>
+
+        {{ form_end(recoForm) }}
+
+{% endblock %}

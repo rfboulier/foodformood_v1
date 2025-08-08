@@ -14,7 +14,7 @@
                         <div
                             class="uk-card uk-card-default uk-card-hover uk-card-body uk-flex uk-flex-column uk-height-1-1">
                             <div class="uk-card-media-top">
-                                <img src="{{ asset('img/'~ reco.imageUrl ) }}" alt="{{ reco.title }}">
+                                <img src="{{ asset('img/' ~ reco.imageUrl ) }}" alt="{{ reco.title }}">
                             </div>
                             <div class="uk-margin-small-top">
                                 <span
@@ -22,12 +22,6 @@
                                 <h3 class="uk-card-title">{{ reco.title }}</h3>
                                 <p>{{ reco.description|length > 160 ? reco.description|slice(0, 160) ~ '…' : reco.description }}</p>
                             </div>
-                            {% if reco.link %}
-                                <div class="uk-margin-auto-top">
-                                    <a href="{{ reco.link }}" class="uk-button uk-button-text"
-                                       target="_blank">Voir le {{ reco.type }}</a>
-                                </div>
-                            {% endif %}
                             <div class="uk-margin-auto-top">
                                 <a href="#" class="uk-button uk-button-text"
                                    target="_blank">En savoir plus →</a>

@@ -14,8 +14,7 @@
                         <div
                             class="uk-card uk-card-default uk-card-hover uk-card-body uk-flex uk-flex-column uk-height-1-1">
                             <div class="uk-card-media-top">
-                                <img src="{{ asset('img/'~ reco.imageUrl ) }}" alt="{{ reco.title }}"
-                                     loading="lazy">
+                                <img src="{{ asset('img/'~ reco.imageUrl ) }}" alt="{{ reco.title }}">
                             </div>
                             <div class="uk-margin-small-top">
                                 <span
@@ -26,9 +25,13 @@
                             {% if reco.link %}
                                 <div class="uk-margin-auto-top">
                                     <a href="{{ reco.link }}" class="uk-button uk-button-text"
-                                       target="_blank">En savoir plus →</a>
+                                       target="_blank">Voir le {{ reco.type }}</a>
                                 </div>
                             {% endif %}
+                            <div class="uk-margin-auto-top">
+                                <a href="#" class="uk-button uk-button-text"
+                                   target="_blank">En savoir plus →</a>
+                            </div>
                         </div>
                     </div>
                 {% else %}
